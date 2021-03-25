@@ -14,7 +14,7 @@ namespace AppMobileRessources
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new PagePrincipale());
         }
 
         protected override void OnStart()
