@@ -30,12 +30,13 @@ namespace AppMobileRessources.Views
 
             _contenuEntry = new Entry();
             _contenuEntry.Keyboard = Keyboard.Text;
-            _contenuEntry.Placeholder = "Titre de la ressource";
+            _contenuEntry.Placeholder = "Contenu de la ressource";
             stackLayout.Children.Add(_contenuEntry);
 
             _saveButton = new Button();
             _saveButton.Text = "Add";
             _saveButton.Clicked += _saveButton_Clicked;
+            stackLayout.Children.Add(_saveButton);
 
             Content = stackLayout;
         }
@@ -54,7 +55,7 @@ namespace AppMobileRessources.Views
                 contenu = _contenuEntry.Text
             };
             db.Insert(ressources);
-            await DisplayAlert(null,ressources.titre + "Saved", "Ok");
+            await DisplayAlert(null,ressources.titre + " Saved", "Ok");
             await Navigation.PopAsync();
         }
     }

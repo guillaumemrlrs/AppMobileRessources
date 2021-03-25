@@ -18,12 +18,22 @@ namespace AppMobileRessources.Views
             button.Clicked += Button_Clicked; ;
             stackLayout.Children.Add(button);
 
+            button = new Button();
+            button.Text = "Voir les ressources";
+            button.Clicked += Button_Get_Clicked; ;
+            stackLayout.Children.Add(button);
+
             Content = stackLayout;
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AjouterRessources());
+        }
+
+        private async void Button_Get_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new VoirToutesRessources());
         }
 
 
