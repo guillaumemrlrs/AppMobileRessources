@@ -23,6 +23,11 @@ namespace AppMobileRessources.Views
             button.Clicked += Button_Get_Clicked; ;
             stackLayout.Children.Add(button);
 
+            button = new Button();
+            button.Text = "Modifier";
+            button.Clicked += Button_Edit_Clicked; ;
+            stackLayout.Children.Add(button);
+
             Content = stackLayout;
         }
 
@@ -34,6 +39,11 @@ namespace AppMobileRessources.Views
         private async void Button_Get_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new VoirToutesRessources());
+        }
+
+        private async void Button_Edit_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ModifierRessources());
         }
 
 
