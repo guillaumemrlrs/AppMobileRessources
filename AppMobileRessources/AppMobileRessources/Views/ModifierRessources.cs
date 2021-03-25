@@ -52,6 +52,7 @@ namespace AppMobileRessources.Views
             _button.Clicked += _button_Clicked;
             stackLayout.Children.Add(_button);
 
+
             Content = stackLayout;
         }
 
